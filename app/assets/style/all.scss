@@ -1,6 +1,8 @@
-@import 'base/reset';
-@import '_variable.scss';
-@import '_layout.scss';
-@import '_index.scss';
-@import '_page.scss';
-@import 'base/typography'
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "base/reset";
+@import "base/typography";
+@import "components/buttons";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/index";
