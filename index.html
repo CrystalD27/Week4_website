@@ -28,6 +28,7 @@
     <div class="container">
       <div class="logo">
         <a href="#"><img src="./assets/images/logo-white.png" alt="logo"></a>
+
       </div>
       <div class="nav">
         <ul>
@@ -93,13 +94,14 @@
 <div class="design">
     <h2>聯名設計鏡框</h2>
     <ul class="designList container">
-        <li><img src="./assets/images/home-section4-1.png" alt="home-section4-1">
+        <li><img class="designDoubleA" src="./assets/images/home-section4-1.png" alt="home-section4-1">
+            <img class="designDoubleA-sm" src="./assets/images/home-section4-1-sm.png" alt="home-section4-1-sm">
             <p>DOUBLE A+</p>
         </li>
-        <li><img src="./assets/images/home-section4-2.png" alt="home-section4-2">
+        <li><img class="designYouth" src="./assets/images/home-section4-2.png" alt="home-section4-2">
+            <img class="designYouth-sm" src="./assets/images/home-section4-2-sm.png" alt="home-section4-2-sm">
             <p>YOUTH</p>
         </li>
-
     </ul>
 
 </div>
@@ -165,30 +167,33 @@
 <div class="contactInfo">
     <div class="contactBox">
         <h2>聯絡我們</h2>
-        <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+        <p class="mb-2">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
         <div class="formList">
             <form action="/index.aspx" method="post">
+
                 <label for="myName2" name="myName">姓名</label>
-                <br>
-                <input type="text" id="myName2" name="myName" placeholder="陳小明">
-                <br>
+
+                <input type="text" class="contact" id="myName2" name="myName" placeholder="陳小明">
+
                 <label for="tel2" name="tel">電話</label>
-                <br>
-                <input type="text" id="tel2" name="tel" placeholder="0912-345-678">
-                <br>
+
+                <input type="text" class="contact" id="tel2" name="tel" placeholder="0912-345-678">
+
                 <label for="email" name="myEmail">電子郵件</label>
-                <br>
-                <input type="text" id="email" name="email" placeholder="example@email.com">
-                <br>
+
+                <input type="text" class="contact" id="email" name="email" placeholder="example@email.com">
+
                 <label for="comments" name="myComments">意見反應</label><br>
-                <textarea type="text" id="comments" name="myComments" placeholder="請輸入您的意見">
-                <input type="checkbox" id="checkbox" name="checkbox">
-                <label for="checkbox">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+                <textarea type="text" class="contact size" id="comments" name="myComments"
+                    placeholder="請輸入您的意見"> </textarea>
+                <input class="check" class="contact" type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox" class="mb-5">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+                <input type="submit" class="btn" value="確認送出">
+            </form>
+
         </div>
-        <input type="submit" value="送出">
-        </form>
+
     </div>
-</div>
   </main>
   <footer class="footer">
     <div class="container">
