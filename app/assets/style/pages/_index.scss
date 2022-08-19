@@ -5,12 +5,23 @@ h2 {
     padding-bottom: 48px;
 }
 
+@include phone {
+    h2 {
+        font-size: 24px;
+    }
+}
+
 .banner {
     background-image: url("../images/home-header.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 787px;
+
+    @include pad {
+        background-image: url("../images/home-header-sm.png");
+
+    }
 
 
     .title {
@@ -32,7 +43,7 @@ h2 {
     span {
         color: $secondary;
         font-size: 36px;
-        line-height: 54px;
+
 
     }
 
@@ -44,6 +55,18 @@ h2 {
         text-decoration: none;
     }
 
+    @include phone {
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+
+
+    }
 }
 
 
@@ -56,12 +79,19 @@ h2 {
         padding-bottom: 32px;
     }
 
+    @include phone {
 
+
+        h3 {
+            font-size: 24px;
+        }
+    }
 
 
     .professionList {
         display: flex;
         justify-content: space-between;
+
 
         li {
             width: 23.6%;
@@ -81,10 +111,33 @@ h2 {
         }
 
 
+        @include pad {
+
+            flex-wrap: wrap;
+
+            li {
+                width: 43.8%;
+            }
+        }
+
+        @include phone {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                width: 100%;
+            }
+
+
+        }
     }
 
-
 }
+
+
+
+
 
 .classic {
 
@@ -95,9 +148,13 @@ h2 {
         display: flex;
         justify-content: space-between;
 
+
+
         li {
             width: 32%;
         }
+
+
 
         img {
             width: 100%;
@@ -108,6 +165,28 @@ h2 {
             color: $primary ;
             font-weight: bold;
         }
+
+        @include pad {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                width: 43.75%
+            }
+
+        }
+
+        @include phone {
+
+
+            li {
+                width: 100%;
+            }
+        }
+
 
     }
 
@@ -123,6 +202,11 @@ h2 {
     text-align: center;
     padding-top: 80px;
 
+    @include pad {
+        background-image: url("../images/index-bg-sm.png");
+        height: 960px;
+    }
+
     h2 {
         color: $white;
     }
@@ -132,25 +216,55 @@ h2 {
         justify-content: space-between;
         background-color: $white;
 
-        li {
-            width: 50%;
+        @include pad {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
         }
 
-        img {
-            width: 100%;
+        li {
+            width: 50%;
+
+            @include pad {
+                width: 103.5%;
+            }
+
+            .designDoubleA {
+                display: block;
+
+
+            }
+
+            .designDoubleA-sm {
+                display: none;
+            }
+
+            .designYouth {
+                display: block;
+
+            }
+
+            .designYouth-sm {
+                display: none;
+            }
         }
+
+
 
         p {
             font-size: 48px;
             color: $primary ;
             font-weight: bold;
+
         }
+
+
 
     }
 
 
 }
-
 
 .comments {
 
@@ -168,18 +282,44 @@ h2 {
             width: 23.6%;
         }
 
+
+
         img {
             width: 100%;
             vertical-align: middle;
         }
 
+        @include pad {
+
+            flex-wrap: wrap;
+
+            li {
+                width: 48.3%;
+                margin-bottom: 24px;
+
+                :last-child {
+                    margin-bottom: 0px;
+                }
+            }
+
+        }
+
+        @include phone {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                width: 100%;
+            }
+        }
     }
 
     .cardDetails {
         border: 1px solid;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 205px;
         padding: 16px;
         border-color: #DEE2E6;
@@ -199,36 +339,8 @@ h2 {
 }
 
 
-.classic {
-
-    text-align: center;
-    padding-top: 80px;
-
-    .classicList {
-        display: flex;
-        justify-content: space-between;
-
-        li {
-            width: 32%;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        p {
-            font-size: 48px;
-            color: $primary ;
-            font-weight: bold;
-        }
-
-    }
-
-
-}
 
 .contactInfo {
-    border: 1px solid pink;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,22 +353,40 @@ h2 {
 
 .contactBox {
     max-width: 636px;
-    border: 1px solid purple;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 80px;
 
-    label {
-        display: inline-block;
 
 
+    .contact {
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        padding: 8px;
+        background-color: $bg-primary;
+        border: 1px solid #000000;
     }
 
-    input {
+    .size {
+        height: 136px;
+    }
 
-        display: inline-block;
-        padding: 8px 12px;
+    .btn {
+        width: 65.4%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 48px;
+        padding: 16px 0;
+        background-color: $primary ;
+        color: $white;
+        border: none;
+
+        &:hover {
+            color: $secondary;
+        }
+
     }
 }
