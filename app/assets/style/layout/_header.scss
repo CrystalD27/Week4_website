@@ -1,5 +1,12 @@
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+
 .header {
     background-color: $primary;
+    position: relative;
 
     .container {
         display: flex;
@@ -17,21 +24,99 @@
         }
     }
 
-    .nav ul {
-        display: flex;
-        gap: 64px;
+    .nav {
+        @include phone {
+            width: 100%;
+            background-color: $primary;
+            position: absolute;
+            top: -600;
+            transition: 0.5s;
+        }
 
-        li {
-            padding: 25px 0px;
-            font-size: 20px;
-            line-height: 1.5;
+        // 無法使用top:-600讓nav先消失在螢幕
 
 
-            a {
-                color: $white;
-                text-decoration: none;
+
+        ul {
+            display: flex;
+            gap: 64px;
+
+            @include phone {
+                flex-direction: column;
+                gap: 0px;
+                position: fixed;
+                top: 86px;
+                background-color: $primary;
+                display: block;
+                text-align: center;
+                width: 100%;
+                display: none;
+            }
+
+            // 左邊會有間隔，當初在html設定container(padding left 13, right 14
+            // 使用width:100%右邊有空白，左邊卻沒有？
+
+            li {
+                padding: 25px 0px;
+                font-size: 20px;
+
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+
+                    @include phone {
+                        display: block;
+
+                    }
+                }
+
+
             }
         }
     }
 
+    #menu_control:checked~.header .nav {
+        top: 100%;
+    }
+
+    // 應該要在點擊漢堡時出現，但是卻沒有反應
+
+
+
+    .menu_btn {
+        width: 30px;
+        height: 20px;
+        background: $primary;
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        display: none;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            // 垂直置中
+            background-color: $white;
+            box-shadow: 0 10px 0 $white, 0 -10px 0 $white;
+        }
+
+        span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+
+        @include phone {
+            display: block;
+        }
+    }
 }

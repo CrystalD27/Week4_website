@@ -8,6 +8,7 @@ h2 {
 @include phone {
     h2 {
         font-size: 24px;
+        padding-bottom: 24px;
     }
 }
 
@@ -21,6 +22,10 @@ h2 {
     @include pad {
         background-image: url("../images/home-header-sm.png");
 
+    }
+
+    @include phone {
+        height: 396px;
     }
 
 
@@ -75,17 +80,18 @@ h2 {
     padding: 80px 0px;
     background-color: $bg-primary;
 
+    @include phone {
+        padding: 40px 0;
+    }
+
     h2 {
         padding-bottom: 32px;
-    }
 
-    @include phone {
-
-
-        h3 {
-            font-size: 24px;
+        @include phone {
+            padding-bottom: 24px;
         }
     }
+
 
 
     .professionList {
@@ -106,6 +112,10 @@ h2 {
             p {
                 text-align: left;
                 color: $black;
+
+                @include phone {
+                    text-align: center;
+                }
 
             }
         }
@@ -142,7 +152,11 @@ h2 {
 .classic {
 
     text-align: center;
-    padding-top: 80px;
+    padding: 80px 0px;
+
+    @include phone {
+        padding: 40px 0;
+    }
 
     .classicList {
         display: flex;
@@ -164,6 +178,14 @@ h2 {
             font-size: 48px;
             color: $primary ;
             font-weight: bold;
+
+            @include phone {
+                padding-bottom: 24px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
         }
 
         @include pad {
@@ -198,23 +220,33 @@ h2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 608px;
+    padding: 80px 0;
     text-align: center;
-    padding-top: 80px;
+
 
     @include pad {
         background-image: url("../images/index-bg-sm.png");
-        height: 960px;
+        padding: 40px 0;
+
     }
+
+
 
     h2 {
         color: $white;
+
+
+        @include phone {
+            padding-bottom: 24px;
+            padding-top: 24px;
+        }
+
     }
+
 
     .designList {
         display: flex;
         justify-content: space-between;
-        background-color: $white;
 
         @include pad {
             flex-direction: column;
@@ -223,53 +255,73 @@ h2 {
             align-items: center;
         }
 
-        li {
-            width: 50%;
+    }
 
-            @include pad {
-                width: 103.5%;
-            }
+    li {
+        .designDoubleA {
+            display: block;
 
-            .designDoubleA {
-                display: block;
-
-
-            }
-
-            .designDoubleA-sm {
+            @include phone {
                 display: none;
-            }
 
-            .designYouth {
-                display: block;
-
-            }
-
-            .designYouth-sm {
-                display: none;
             }
         }
 
 
 
-        p {
-            font-size: 48px;
-            color: $primary ;
-            font-weight: bold;
+        .designDoubleA-sm {
+            display: none;
 
+            @include phone {
+                display: block;
+
+            }
         }
 
+
+
+        .designYouth {
+            display: block;
+
+            @include phone {
+                display: none;
+
+            }
+        }
+
+
+
+        .designYouth-sm {
+            display: none;
+
+            @include phone {
+                display: block;
+            }
+
+        }
 
 
     }
 
 
+
+    p {
+        font-size: 48px;
+        color: $primary ;
+        font-weight: bold;
+        background-color: $white;
+
+    }
 }
 
 .comments {
 
     text-align: center;
     padding: 80px 0px;
+
+    @include phone {
+        padding: 40px 0;
+    }
 
     .commentsList {
         display: flex;
@@ -345,7 +397,7 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: $bg-primary ;
-    padding-top: 80px;
+
 
 
 }
@@ -357,8 +409,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 80px;
+    padding: 80px 0;
 
+    @include phone {
+        padding: 40px 0;
+
+    }
 
 
     .contact {
