@@ -247,8 +247,7 @@ body {
         background-color: #AA0601;
         display: block;
         text-align: center;
-        width: 100%;
-        display: none; } }
+        width: 100%; } }
     .header .nav ul li {
       padding: 25px 0px;
       font-size: 20px; }
