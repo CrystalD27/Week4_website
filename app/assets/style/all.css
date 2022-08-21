@@ -57,8 +57,8 @@
 
 .container {
   max-width: 1320px;
-  margin: 0 auto;
   padding: 0px 12px;
+  margin: 0 auto;
 }
 
 @media (max-width: 992px) {
@@ -238,6 +238,10 @@ body {
   opacity: 0;
 }
 
+#menu_control:checked ~ .header > .container > .nav {
+  top: 100%;
+}
+
 .header {
   background-color: #AA0601;
   position: relative;
@@ -262,18 +266,7 @@ body {
   height: 48.57px;
 }
 
-@media (max-width: 767px) {
-  .header .nav {
-    width: 100%;
-    background-color: #AA0601;
-    position: absolute;
-    top: -600;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-}
-
-.header .nav ul {
+.header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,39 +274,38 @@ body {
 }
 
 @media (max-width: 767px) {
-  .header .nav ul {
+  .header .nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0px;
-    position: fixed;
-    top: 86px;
+    right: 0;
     background-color: #AA0601;
     display: block;
     text-align: center;
     width: 100%;
+    position: absolute;
+    top: -500px;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
 }
 
-.header .nav ul li {
+.header .nav li {
   padding: 25px 0px;
   font-size: 20px;
 }
 
-.header .nav ul li a {
+.header .nav li a {
   color: #fff;
   text-decoration: none;
 }
 
 @media (max-width: 767px) {
-  .header .nav ul li a {
+  .header .nav li a {
     display: block;
   }
-}
-
-.header #menu_control:checked ~ .header .nav {
-  top: 100%;
 }
 
 .header .menu_btn {

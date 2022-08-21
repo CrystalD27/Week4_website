@@ -1,7 +1,7 @@
 .container {
     max-width: 1320px;
-    margin: 0 auto;
     padding: 0px 12px;
+    margin: 0 auto;
 
     @include pad {
         max-width: 720px;

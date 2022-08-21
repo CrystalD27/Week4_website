@@ -19,6 +19,7 @@ h2 {
     background-position: center;
     height: 787px;
 
+
     @include pad {
         background-image: url("../images/home-header-sm.png");
 

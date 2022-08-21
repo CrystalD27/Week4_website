@@ -2,6 +2,11 @@
     position: absolute;
     z-index: -2;
     opacity: 0;
+
+}
+
+#menu_control:checked~.header>.container>.nav {
+    top: 100%;
 }
 
 .header {
@@ -24,61 +29,60 @@
         }
     }
 
+
+
+    // 無法使用top:-600讓nav先消失在螢幕
+
+
+
     .nav {
+        display: flex;
+        gap: 64px;
+
         @include phone {
-            width: 100%;
+            flex-direction: column;
+            gap: 0px;
+            right: 0;
             background-color: $primary;
+            display: block;
+            text-align: center;
+            width: 100%;
             position: absolute;
-            top: -600;
-            transition: 0.5s;
+            top: -500px;
+            transition: .5s;
         }
 
-        // 無法使用top:-600讓nav先消失在螢幕
 
 
+        // 左邊會有間隔，當初在html設定container(padding left 13, right 14
+        // 使用width:100%右邊有空白，左邊卻沒有？
 
-        ul {
-            display: flex;
-            gap: 64px;
-
-            @include phone {
-                flex-direction: column;
-                gap: 0px;
-                position: fixed;
-                top: 86px;
-                background-color: $primary;
-                display: block;
-                text-align: center;
-                width: 100%;
-
-            }
-
-            // 左邊會有間隔，當初在html設定container(padding left 13, right 14
-            // 使用width:100%右邊有空白，左邊卻沒有？
-
-            li {
-                padding: 25px 0px;
-                font-size: 20px;
+        li {
+            padding: 25px 0px;
+            font-size: 20px;
 
 
-                a {
-                    color: $white;
-                    text-decoration: none;
+            a {
+                color: $white;
+                text-decoration: none;
 
-                    @include phone {
-                        display: block;
+                @include phone {
+                    display: block;
 
-                    }
                 }
-
-
             }
+
+
         }
     }
 
-    #menu_control:checked~.header .nav {
-        top: 100%;
-    }
+
+
+
+
+
+
+
 
     // 應該要在點擊漢堡時出現，但是卻沒有反應
 
