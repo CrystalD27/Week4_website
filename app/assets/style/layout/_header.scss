@@ -30,11 +30,6 @@
     }
 
 
-
-    // 無法使用top:-600讓nav先消失在螢幕
-
-
-
     .nav {
         display: flex;
         gap: 64px;
@@ -49,13 +44,10 @@
             width: 100%;
             position: absolute;
             top: -500px;
-            transition: .5s;
+
+
         }
 
-
-
-        // 左邊會有間隔，當初在html設定container(padding left 13, right 14
-        // 使用width:100%右邊有空白，左邊卻沒有？
 
         li {
             padding: 25px 0px;
@@ -78,16 +70,6 @@
 
 
 
-
-
-
-
-
-
-    // 應該要在點擊漢堡時出現，但是卻沒有反應
-
-
-
     .menu_btn {
         width: 30px;
         height: 20px;
@@ -97,6 +79,8 @@
         top: 30px;
         right: 20px;
         display: none;
+        cursor: pointer;
+
 
         &::before {
             content: '';
@@ -106,7 +90,6 @@
             top: 0px;
             bottom: 0px;
             margin: auto;
-            // 垂直置中
             background-color: $white;
             box-shadow: 0 10px 0 $white, 0 -10px 0 $white;
         }
@@ -123,4 +106,5 @@
             display: block;
         }
     }
+
 }

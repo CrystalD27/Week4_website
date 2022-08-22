@@ -1,4 +1,23 @@
 /*color*/
+.container {
+  max-width: 1320px;
+  padding: 0px 12px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-right: 14px;
+    padding-left: 13px;
+  }
+}
+
 .mb-0 {
   margin-bottom: 8px;
 }
@@ -53,25 +72,6 @@
 
 .pb-6 {
   padding-bottom: 80px;
-}
-
-.container {
-  max-width: 1320px;
-  padding: 0px 12px;
-  margin: 0 auto;
-}
-
-@media (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (max-width: 767px) {
-  .container {
-    padding-right: 14px;
-    padding-left: 13px;
-  }
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -287,8 +287,6 @@ body {
     width: 100%;
     position: absolute;
     top: -500px;
-    -webkit-transition: .5s;
-    transition: .5s;
   }
 }
 
@@ -319,7 +317,7 @@ body {
   display: none;
 }
 
-.header .menu_btn::before {
+.header::before {
   content: '';
   position: absolute;
   width: 30px;
@@ -332,7 +330,7 @@ body {
           box-shadow: 0 10px 0 #fff, 0 -10px 0 #fff;
 }
 
-.header .menu_btn span {
+.header span {
   opacity: 0;
   width: 1px;
   height: 1px;
@@ -341,7 +339,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .header .menu_btn {
+  .header {
     display: block;
   }
 }
