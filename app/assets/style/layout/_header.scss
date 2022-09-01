@@ -1,11 +1,11 @@
-#menu_control {
+#menu__control {
     position: absolute;
     z-index: -2;
     opacity: 0;
 
 }
 
-#menu_control:checked~.header>.container>.nav {
+#menu__control:checked~.navbar {
     top: 100%;
 }
 
@@ -17,12 +17,28 @@
         display: flex;
         justify-content: space-between;
 
-        .logo a {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+    }
+
+
+    .logo {
+        z-index: 1;
+
+        &__link {
             display: block;
             padding: 16px 0px 15.43px 0px;
         }
 
-        .logo img {
+        &__img {
             width: 80px;
             height: 48.57px;
 
@@ -30,9 +46,15 @@
     }
 
 
-    .nav {
-        display: flex;
+
+    .lebel {
+        z-index: 1;
+    }
+
+    .navbar {
+
         gap: 64px;
+        z-index: 1;
 
         @include phone {
             flex-direction: column;
@@ -44,18 +66,17 @@
             width: 100%;
             position: absolute;
             top: -500px;
-
+            transition: 1s ease-in-out;
+            z-index: 0;
 
         }
 
 
-        li {
+        &__item {
             padding: 25px 0px;
-            font-size: 20px;
-
 
             a {
-                color: $white;
+                color: $light;
                 text-decoration: none;
 
                 @include phone {
@@ -70,7 +91,7 @@
 
 
 
-    .menu_btn {
+    .menu__btn {
         width: 30px;
         height: 20px;
         background: $primary;
@@ -80,6 +101,7 @@
         right: 20px;
         display: none;
         cursor: pointer;
+        z-index: 1;
 
 
         &::before {
@@ -90,8 +112,8 @@
             top: 0px;
             bottom: 0px;
             margin: auto;
-            background-color: $white;
-            box-shadow: 0 10px 0 $white, 0 -10px 0 $white;
+            background-color: $light;
+            box-shadow: 0 10px 0 $light, 0 -10px 0 $light;
         }
 
         span {

@@ -1,0 +1,28 @@
+.btn {
+    background-color: $primary;
+    color: $light;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $danger-dark;
+        transform: all .5s ease-in;
+
+    }
+}
+
+
+.btn__buy {
+    padding: 6px 12px;
+
+}
+
+.btn__send {
+    width: 65.4%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+    padding: 16px 0;
+    border: none;
+    cursor: pointer;
+
+}

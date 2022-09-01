@@ -5,33 +5,33 @@ engine: ejs
 ---
 
 <div class="banner">
-    <div class="title container">
-        <span>Promise-Desert 2020 早春系列</span>
-        <h1>
+    <div class="banner__title container">
+        <span class="fs-7">Promise-Desert 2020 早春系列</span>
+        <h1 class="fs-10 fw-bold">
             看得清，才能看得遠
         </h1>
-        <a class="buy btn" href="#">立即購買</a>
+        <a class="btn btn__buy" href="#">立即購買</a>
     </div>
 </div>
 
 <div class="profession ">
-    <h2>用專業的心，做專業的事</h2>
-    <ul class="professionList container">
+    <h2 class="pb-5">用專業的心，做專業的事</h2>
+    <ul class="profession__list container">
         <li><img src="./assets/images/home-section2-1.png" alt="home-section2-1">
-            <h3 class="mb-0">單一價格</h3>
+            <h3 class="mb-2 fs-5 fw-bold">單一價格</h3>
             <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
         </li>
         <li><img src="./assets/images/home-section2-2.png" alt="home-section2-2">
-            <h3 class="mb-0">20 分鐘即可取件</h3>
+            <h3 class="mb-2 fs-5 fw-bold">20 分鐘即可取件</h3>
             <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。
         </li>
         <li><img src="./assets/images/home-section2-3.png" alt="home-section2-3">
-            <h3 class="mb-0">安心售後服務</h3>
+            <h3 class="mb-2 fs-5 fw-bold">安心售後服務</h3>
             <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及
                 專業維修服務。
         </li>
         <li><img src="./assets/images/home-sectioin2-4.png" alt="home-section2-4">
-            <h3 class="mb-0">關於鏡片</h3>
+            <h3 class="mb-2 fs-5 fw-bold">關於鏡片</h3>
             <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。
         </li>
     </ul>
@@ -39,29 +39,29 @@ engine: ejs
 
 <div class="classic">
     <h2>經典系列鏡框</h2>
-    <ul class="classicList container">
+    <ul class="classic__list container">
         <li><img src="./assets/images/home-section3-1.png" alt="home-section3-1">
-            <p>OPTICAL</p>
+            <p class="fs-9 fw-bold">OPTICAL</p>
         </li>
         <li><img src="./assets/images/home-section3-2.png" alt="home-section3-2">
-            <p>SUNGLASSES</p>
+            <p class="fs-9 fw-bold">SUNGLASSES</p>
         </li>
         <li><img src="./assets/images/home-section3-3.png" alt="home-section3-3">
-            <p>FUNCTIONAL</p>
+            <p class="fs-9 fw-bold">FUNCTIONAL</p>
         </li>
     </ul>
 </div>
 
 <div class="design">
     <h2>聯名設計鏡框</h2>
-    <ul class="designList container">
-        <li><img class="designDoubleA" src="./assets/images/home-section4-1.png" alt="home-section4-1">
-            <img class="designDoubleA-sm" src="./assets/images/home-section4-1-sm.png" alt="home-section4-1-sm">
-            <p>DOUBLE A+</p>
+    <ul class="design__list container">
+        <li><img class="design__double" src="./assets/images/home-section4-1.png" alt="home-section4-1">
+            <img class="design__double__sm" src="./assets/images/home-section4-1-sm.png" alt="home-section4-1-sm">
+            <p class="fs-9 fw-bold">DOUBLE A+</p>
         </li>
-        <li><img class="designYouth" src="./assets/images/home-section4-2.png" alt="home-section4-2">
-            <img class="designYouth-sm" src="./assets/images/home-section4-2-sm.png" alt="home-section4-2-sm">
-            <p>YOUTH</p>
+        <li><img class="design__youth" src="./assets/images/home-section4-2.png" alt="home-section4-2">
+            <img class="design__youth__sm" src="./assets/images/home-section4-2-sm.png" alt="home-section4-2-sm">
+            <p class="fs-9 fw-bold">YOUTH</p>
         </li>
     </ul>
 
@@ -69,89 +69,89 @@ engine: ejs
 
 <div class="comments">
     <h2>顧客推薦</h2>
-    <ul class="commentsList container">
-        <li>
-            <div class="cardImg">
+    <ul class="comments__list d-flex justify-content-between container">
+        <li class="card__body">
+            <div class="card__img">
                 <img src="./assets/images/home-section5-1.png" alt="home-section5-1">
             </div>
-            <div class="cardDetails">
-                <div class="cardInfo">
-                    <p class="pb-0">Jessy</p>
+            <div class="card__item">
+                <div class="card__info">
+                    <p class="mb-2">Jessy</p>
                     <p>眼鏡品質優良，下次還會想來這邊購買！
                     </p>
                 </div>
-                <span>2021/06/20</span>
+                <time>2021/06/20</time>
             </div>
         </li>
         <li>
-            <div class="cardImg">
+            <div class="card__img">
                 <img src="./assets/images/home-section5-2.png" alt="home-section5-2">
             </div>
-            <div class="cardDetails">
-                <div class="cardInfo">
-                    <p class="pb-0">凱倫</p>
+            <div class="card__item">
+                <div class="card__info">
+                    <p class="mb-2">凱倫</p>
                     <p>做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！
                     </p>
                 </div>
-                <span>2021/04/18</span>
+                <time>2021/04/18</time>
             </div>
         </li>
         <li>
-            <div class="cardImg">
+            <div class="card__img">
                 <img src="./assets/images/home-section5-3.png" alt="home-section5-3">
             </div>
-            <div class="cardDetails">
-                <div class="cardInfo">
-                    <p class="pb-0">悠悠</p>
+            <div class="card__item">
+                <div class="card__info">
+                    <p class="mb-2">悠悠</p>
                     <p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！
                     </p>
                 </div>
-                <span>2020/12/25</span>
+                <time>2020/12/25</time>
             </div>
         </li>
         <li>
-            <div class="cardImg">
+            <div class="card__img">
                 <img src="./assets/images/home-section5-4.png" alt="home-section5-4">
             </div>
-            <div class="cardDetails">
-                <div class="cardInfo">
-                    <p class="pb-0">Kyuan</p>
+            <div class="card__item">
+                <div class="card__info">
+                    <p class="mb-2">Kyuan</p>
                     <p>服務很好，品質沒有任何問題，非常喜歡。
                     </p>
                 </div>
-                <span>2020/10/31</span>
+                <time>2020/10/31</time>
             </div>
         </li>
     </ul>
 </div>
 
-<div class="contactInfo">
-    <div class="contactBox container">
+<div class="contact d-flex justify-content-center align-items-center">
+    <div class="contact__box container d-flex flex-column justify-content-center align-items-center">
         <h2>聯絡我們</h2>
-        <p class="mb-2">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
-        <div class="formList">
-            <form action="/index.aspx" method="post">
+        <p class="mb-4">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
 
-                <label for="myName2" name="myName">姓名</label>
+        <form action="/index.aspx" method="post">
 
-                <input type="text" class="contact" id="myName2" name="myName" placeholder="陳小明">
+            <label for="myName2" name="myName">姓名</label>
 
-                <label for="tel2" name="tel">電話</label>
+            <input type="text" class="contact__form__box" id="myName2" name="myName" placeholder="陳小明">
 
-                <input type="text" class="contact" id="tel2" name="tel" placeholder="0912-345-678">
+            <label for="tel2" name="tel">電話</label>
 
-                <label for="email" name="myEmail">電子郵件</label>
+            <input type="tel" class="contact__form__box" id="tel2" name="tel" placeholder="0912-345-678">
 
-                <input type="text" class="contact" id="email" name="email" placeholder="example@email.com">
+            <label for="email" name="myEmail">電子郵件</label>
 
-                <label for="comments" name="myComments">意見反應</label><br>
-                <textarea type="text" class="contact size" id="comments" name="myComments"
-                    placeholder="請輸入您的意見"> </textarea>
-                <input class="check" class="contact" type="checkbox" id="checkbox" name="checkbox">
-                <label for="checkbox" class="mb-5">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
-                <input type="submit" class="btn" value="確認送出">
-            </form>
+            <input type="email" class="contact__form__box" id="email" name="email" placeholder="example@email.com">
 
-        </div>
+            <label for="comments" name="myComments">意見反應</label><br>
+            <textarea type="text" class="contact__form__box size" id="comments" name="myComments"
+                placeholder="請輸入您的意見"> </textarea>
+            <input class="check" class="contact__form__box" type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox" class="mb-6">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+            <input type="submit" class="btn btn__send" value="確認送出">
+        </form>
+
+
 
     </div>

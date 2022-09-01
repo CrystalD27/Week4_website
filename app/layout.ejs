@@ -8,7 +8,7 @@
   <title>
     <%- title %>
   </title>
-  <link rel="stylesheet" href="./assets/style/all.css">
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet"
@@ -21,25 +21,36 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mukta&family=Noto+Sans+TC:wght@400;500;700&family=Roboto&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-  <input type="checkbox" name="checkbox" id="menu_control">
+
   <header class="header">
+
     <div class="container">
       <div class="logo">
-        <a href="#"><img src="./assets/images/logo-white.png" alt="logo"></a>
+        <a class="logo__link" href="index.html"><img class="logo__img" src="./assets/images/logo-white.png"
+            alt="logo"></a>
 
       </div>
-      <Label for="menu_control" class="menu_btn">
+      <Label for="menu__control" class="menu__btn">
         <span>選單</span>
       </Label>
-
-      <ul class="nav">
-        <li><a href="#">系列鏡框</a></li>
-        <li><a href="#">門市據點</a></li>
-        <li><a href="#">部落格</a></li>
-        <li><a href="#">常見問題</a></li>
+      <input type="checkbox" name="checkbox" id="menu__control">
+      <ul class="navbar d-flex">
+        <li class="navbar__item fs-4">
+          <a href="product_optical.html">系列鏡框</a>
+        </li>
+        <li class="navbar__item fs-4">
+          <a href="#">門市據點</a>
+        </li>
+        <li class="navbar__item fs-4">
+          <a href="#">部落格</a>
+        </li>
+        <li class="navbar__item fs-4">
+          <a href="#">常見問題</a>
+        </li>
       </ul>
 
     </div>
@@ -48,23 +59,22 @@
 
     <%- contents %>
   </main>
+
   <footer class="footer">
-    <div class="container">
-      <div class="footerLeft">
-        <ul class="footerNav">
-          <li><a href="#">首頁</a></li>
-          <li><a href="#">系列鏡框</a></li>
+    <div class="container d-flex justify-content-between ">
+      <div class="footer__left">
+        <ul class="footer__navbar d-flex fs-3 ">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="product_optical.html">系列鏡框</a></li>
           <li><a href="#">門市據點</a></li>
           <li><a href="#">部落格</a></li>
           <li><a href="#">常見問題</a></li>
         </ul>
-        <div class="menu-icon" id="icon1">
-          <div class="menu-icon_hamburger"></div>
-        </div>
 
-        <ul class="footerText">
+
+        <ul class="footer__text mb-5">
           <li>
-            <a href="#">
+            <a class="footer__text__link fs-7" href="#">
               <p><span class="material-symbols-outlined">
                   call
                 </span>0800-000-000</p>
@@ -72,7 +82,7 @@
 
           </li></a>
           <li>
-            <a href="#">
+            <a class="footer__text__link fs-7" href="#">
               <p><span class="material-symbols-outlined">
                   mail
                 </span>glasses@business.com</p>
@@ -81,24 +91,24 @@
 
         </ul>
       </div>
-      <ul class="footerRight">
-        <li><a href="#">
-            <img src="./assets/images/ic-social-fb.png" alt="FB"></a>
+      <ul class="footer__right">
+        <li class="footer__right__item"><a href="#">
+            <img class="footer__right__img" src="./assets/images/ic-social-fb.png" alt="FB"></a>
         </li>
+        <li class="footer__right__item"><a href="#">
+            <img class="footer__right__img" src="./assets/images/ic_social_ig.png" alt="IG"></a>
+        </li class="footer__right__item">
         <li><a href="#">
-            <img src="./assets/images/ic_social_ig.png" alt="IG"></a>
-        </li>
-        <li><a href="#">
-            <img src="./assets/images/ic_social_line.png" alt="Line"></a>
+            <img class="footer__right__img" src="./assets/images/ic_social_line.png" alt="Line"></a>
         </li>
       </ul>
     </div>
 
-    <div class="footerCopyright container">
-      <div class="footerEn">
+    <div class="copyright container d-flex justify-content-between">
+      <div class="copyright__en">
         <p>Copyright © 2020 Glasses.All rights reserved.</p>
       </div>
-      <ul class="footerCn">
+      <ul class="copyright__cn">
         <li>隱私權政策</li>
         <li>服務條款</li>
       </ul>

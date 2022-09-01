@@ -1,5 +1,5 @@
 h2 {
-    color: $secondary;
+    color: $danger-dark;
     font-weight: bold;
     font-size: 48px;
     padding-bottom: 48px;
@@ -30,7 +30,7 @@ h2 {
     }
 
 
-    .title {
+    &__title {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -40,25 +40,13 @@ h2 {
     }
 
     h1 {
-        color: $secondary;
-        font-weight: bold;
-        font-size: 64px;
-    }
+        color: $danger-dark;
 
+    }
 
     span {
-        color: $secondary;
-        font-size: 36px;
+        color: $danger-dark;
 
-
-    }
-
-
-    a {
-        padding: 6px 12px;
-        background-color: $primary;
-        color: $white;
-        text-decoration: none;
     }
 
     @include phone {
@@ -70,24 +58,20 @@ h2 {
         span {
             font-size: 16px;
         }
-
-
     }
 }
 
 
 .profession {
     text-align: center;
-    padding: 80px 0px;
-    background-color: $bg-primary;
+    padding: 80px 0;
+    background-color: $secondary;
 
     @include phone {
         padding: 40px 0;
     }
 
     h2 {
-        padding-bottom: 32px;
-
         @include phone {
             padding-bottom: 24px;
         }
@@ -95,7 +79,7 @@ h2 {
 
 
 
-    .professionList {
+    &__list {
         display: flex;
         justify-content: space-between;
 
@@ -104,15 +88,17 @@ h2 {
             width: 23.6%;
 
             h3 {
-                color: $secondary;
-                font-weight: bold;
-                font-size: 24px;
+                color: $danger-dark;
+            }
 
+            img {
+                width: 83px;
+                height: 83px;
             }
 
             p {
                 text-align: left;
-                color: $black;
+                color: $dark;
 
                 @include phone {
                     text-align: center;
@@ -129,16 +115,20 @@ h2 {
             li {
                 width: 43.8%;
             }
+
+
         }
 
         @include phone {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 32px;
 
             li {
                 width: 100%;
             }
+
 
 
         }
@@ -153,13 +143,13 @@ h2 {
 .classic {
 
     text-align: center;
-    padding: 80px 0px;
+    padding: 80px 0;
 
     @include phone {
         padding: 40px 0;
     }
 
-    .classicList {
+    &__list {
         display: flex;
         justify-content: space-between;
 
@@ -176,9 +166,7 @@ h2 {
         }
 
         p {
-            font-size: 48px;
             color: $primary ;
-            font-weight: bold;
 
             @include phone {
                 padding-bottom: 24px;
@@ -234,7 +222,7 @@ h2 {
 
 
     h2 {
-        color: $white;
+        color: $light;
 
 
         @include phone {
@@ -245,7 +233,7 @@ h2 {
     }
 
 
-    .designList {
+    &__list {
         display: flex;
         justify-content: space-between;
 
@@ -259,7 +247,7 @@ h2 {
     }
 
     li {
-        .designDoubleA {
+        .design__double {
             display: block;
 
             @include phone {
@@ -270,7 +258,7 @@ h2 {
 
 
 
-        .designDoubleA-sm {
+        .design__double__sm {
             display: none;
 
             @include phone {
@@ -281,7 +269,7 @@ h2 {
 
 
 
-        .designYouth {
+        .design__youth {
             display: block;
 
             @include phone {
@@ -292,7 +280,7 @@ h2 {
 
 
 
-        .designYouth-sm {
+        .design__youth__sm {
             display: none;
 
             @include phone {
@@ -304,14 +292,9 @@ h2 {
 
     }
 
-
-
     p {
-        font-size: 48px;
         color: $primary ;
-        font-weight: bold;
-        background-color: $white;
-
+        background-color: $light;
     }
 }
 
@@ -324,12 +307,8 @@ h2 {
         padding: 40px 0;
     }
 
-    .commentsList {
-        display: flex;
-        justify-content: space-between;
+    &__list {
         text-align: left;
-
-
 
         li {
             width: 23.6%;
@@ -368,20 +347,19 @@ h2 {
         }
     }
 
-    .cardDetails {
+    .card__item {
         border: 1px solid;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         height: 205px;
         padding: 16px;
         border-color: #DEE2E6;
         border-radius: 4px;
         box-shadow: 0px 2px 6px #00000029;
 
-        span {
-            color: #707070;
-            ;
+        time {
+            color: $gray-100;
             font-size: 14px;
         }
 
@@ -392,58 +370,32 @@ h2 {
 }
 
 
-
-.contactInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $bg-primary ;
-
-
-
+.contact {
+    background-color: $secondary;
 }
 
 
-.contactBox {
+.contact__box {
     max-width: 636px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 80px 0;
 
     @include phone {
-        padding: 40px 0;
+        padding: 40px 14px;
 
     }
 
 
-    .contact {
+    .contact__form__box {
         width: 100%;
         margin-top: 8px;
         margin-bottom: 16px;
         padding: 8px;
-        background-color: $bg-primary;
-        border: 1px solid #000000;
+        background-color: $secondary;
+        border: 1px solid $dark;
     }
 
     .size {
         height: 136px;
     }
 
-    .btn {
-        width: 65.4%;
-        display: block;
-        margin: 0 auto;
-        margin-top: 48px;
-        padding: 16px 0;
-        background-color: $primary ;
-        color: $white;
-        border: none;
-
-        &:hover {
-            color: $secondary;
-        }
-
-    }
 }
