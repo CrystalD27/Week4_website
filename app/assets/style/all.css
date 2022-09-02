@@ -1179,17 +1179,17 @@ h2 {
 }
 
 .page__item {
-  padding: 12px 16px;
+  padding: 12px 14px;
   border: 1px solid #555555;
 }
 
 .page__item__privious {
-  padding: 11px 12px;
+  padding: 12px 12px;
   border: 1px solid #555555;
 }
 
 .page__item__next {
-  padding: 11px 12px;
+  padding: 12px 12px;
   border: 1px solid #555555;
   background-color: #F2F2F2;
 }
